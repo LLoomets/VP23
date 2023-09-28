@@ -1,2 +1,2 @@
 # VP23
-Veebiprogrammeerimise kursuse faili repositoorium
+Veebiprogrammeerimise kursuse repositoorium
