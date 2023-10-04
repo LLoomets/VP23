@@ -1,7 +1,7 @@
 const monthNamesET = ["jaanuar", "veebruar", "märts", "april", "mai", "juuni",
 	 "juuli", "august", "september", "oktoober", "novemeber", "detsember"];
 
-//const dateETformated = function(){
+//const dateETformatted = function(){
 //	let timeNow = new Date();
 //	//console.log(timeNow)
 //	let dateNow =  timeNow.getDate();
@@ -12,14 +12,14 @@ const monthNamesET = ["jaanuar", "veebruar", "märts", "april", "mai", "juuni",
 //	return dateET;
 //}
 
-const dateETformated = function(){
+const dateETformatted = function(){
 	let dateNow = new Date();
 	return dateNow.getDate() + ". " + monthNamesET[dateNow.getMonth()] + " " + dateNow.getFullYear;
 }
 
-const timeETformated = function(){
+const timeETformatted = function(){
 	let timeNow = new Date();
-	let timeET = (timeNow.getHours()) + ":" + (timeNow.getMinutes()) + ":" + (timeNow.getSeconds()) + ":";
+	let timeET = (timeNow.getHours()) + ":" + (timeNow.getMinutes()) + ":" + (timeNow.getSeconds());
 	return timeET;
 }
 
@@ -39,4 +39,4 @@ const timeOfDayET = function(){
 }
 
 //ekspordin all
-module.exports = {dateETformated: dateETformated, timeETformated: timeETformated, timeOfDayET:timeOfDayET, monthsET:monthNamesET};
+module.exports = {dateETformatted: dateETformatted, timeETformatted: timeETformatted, timeOfDayET:timeOfDayET, monthsET:monthNamesET};

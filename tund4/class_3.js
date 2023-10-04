@@ -17,7 +17,7 @@ fs.readFile("txtfiles/vanasonad.txt", "utf8", (err, data)=>{
 
 const onScreen = function(folkWisdom){
 	console.log("Programmi autor on: " + firstName + " " + lastName);
-	console.log("Täna on: " + datetimeValue.dateETformated());
+	console.log("Täna on: " + datetimeValue.dateETformatted());
 	//console.log(folkWisdom);
 	let folkWisdoms = folkWisdom.split(";");
 	//console.log(folkWisdoms);
@@ -27,13 +27,13 @@ const onScreen = function(folkWisdom){
 	for (let i = 0;i < folkWisdoms.length;  i ++){
 		console.log("Vanasõna nr " + (i + 1) + ': "' + folkWisdoms[i] + '"');
 	}
-	console.log("Kell on: " + datetimeValue.timeETformated());
+	console.log("Kell on: " + datetimeValue.timeETformatted());
 	console.log("Praegu on " + datetimeValue.timeOfDayET());
 	//console.log(datetimeValue.monthsET);
 }
 
 
-//console.log("Täna on: " + dateETformated());
+//console.log("Täna on: " + dateETformatted());
 
 
 

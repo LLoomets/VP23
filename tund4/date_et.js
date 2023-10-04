@@ -1,4 +1,4 @@
-exports.dateETformated = function(){
+exports.dateETformatted = function(){
 	const monthNamesET = ["jaanuar", "veebruar", "märts", "april", "mai", "juuni",
 	 "juuli", "august", "september", "oktoober", "novemeber", "detsember"];
 	let timeNow = new Date();
