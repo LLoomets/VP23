@@ -25,9 +25,16 @@
 	<p>Mul on üks <a href="../~kryrass/" target="_blank">sõber</a> ka!</p>
 	<hr>
 	
-	<form>
-		<label>Eesnimi: </label>
-		<input type="text" name"firstNameInput" id="firstNameInput">
+	<form method="POST">
+		<label for="firstNameInput">Eesnimi: </label>
+		<input type="text" name="firstNameInput" id="firstNameInput" placeholder="Sinu eesnimi ...">
+		<br>
+		
+		<label for="lasttNameInput">Perekonnanimi: </label>
+		<input type="text" name="lastNameInput" id="lasttNameInput" placeholder="Sinu perekonnanimi ...">
+		<br>
+		
+		<input type="submit" name="nameSubmit" value="Salvesta">
 	</form>
 	
 	<hr>

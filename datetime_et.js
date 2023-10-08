@@ -1,35 +1,49 @@
-const dateETformatted = function(){
-	
-	const monthNamesET = ["jaanuar", "veebruar", "märts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"];
-	
-	let timeNow = new Date();
-	return timeNow.getDate() + ". " + monthNamesET[timeNow.getMonth()] + " " + timeNow.getFullYear();
-}
+const monthNamesET = ["jaanuar", "veebruar", "märts", "april", "mai", "juuni",
+	 "juuli", "august", "september", "oktoober", "novemeber", "detsember"];
+
+//const dateETformatted = function(){
+//	let timeNow = new Date();
+//	//console.log(timeNow)
+//	let dateNow =  timeNow.getDate();
+//	let monthNow = timeNow.getMonth();
+//	let yearNow = timeNow.getFullYear();
+	//let dateET = dateNow + "." + (monthNow + 1) + "." + yearNow;
+//	let dateET = dateNow + ". " + monthNamesET[monthNow] + " " + yearNow;
+//	return dateET;
+//}
 
 const dateETformatted = function(){
-	
-	const monthNamesET = ["jaanuar", "veebruar", "märts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"];
-	
+	let dateNow = new Date();
+	return dateNow.getDate() + ". " + monthNamesET[dateNow.getMonth()] + " " + dateNow.getFullYear;
+}
+
+const timeETformatted = function(){
 	let timeNow = new Date();
-	return timeNow.getHours() + ":" + timeNow.getMinutes() + ":" + timeNow.getSeconds();
+	let timeET = (timeNow.getHours()) + ":" + (timeNow.getMinutes()) + ":" + (timeNow.getSeconds());
+	return timeET;
 }
 
 const timeOfDayET = function(){
-    let partOfDay = "suvaline hetk";
-    let hourNow = new Date().getHours;
+	let partOfDay = "suvaline hetk";
+	let hourNow  = new Date().getHours();
+
+	if(hourNow >= 6 && hourNow < 11){
+		partOfDay = "hommik.";
+	}
+
+	if(hourNow >= 12 && hourNow < 14) {
+		partOfDay = "keskpäev"
+	}
+
+	if(hourNow >= 14 && hourNow < 18){
+		partOfDay = "pärastlõuna.";
+	}
 	
-	if(hourNow >= 6 && hourNow < 12){
-		partOfDay = "hommik";
+	if(hourNow >= 18){
+		partOfDay = "õhtu.";
 	}
-	if(hourNow > 14 && hourNow < 18){
-		partOfDay = "pärastlõuna"
-	}
-	if(hoursNow >= 18){
-		partOfDay = "õhtu";
-    }
-    return partOfDay;
+	return partOfDay;
 }
 
-//ekspordin kõik asjad
-
-module.exports = {dateETformatted: dateETformatted, timeETformatted: timeETformatted, timeOfDayET: timeOfDayET};
+//ekspordin all
+module.exports = {dateETformatted: dateETformatted, timeETformatted: timeETformatted, timeOfDayET:timeOfDayET, monthsET:monthNamesET};
